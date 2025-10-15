@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shopify Style Product Page</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="product-page">
+    <section class="product-gallery">
+      <div class="main-image">
+        <img id="mainProductImage" src="https://www.apadisenografico.com/wp-content/uploads/2019/01/Psd-mockup-de-camisetas-template-tshirt-palyera-photoshop-gratis.jpg" alt="Main Product Image" />
+      </div>
+      <div class="thumbnails" id="thumbnailContainer">
+        <!-- Thumbnails inserted dynamically -->
+      </div>
+    </section>
+
+    <section class="product-details">
+      <h1 class="product-title">Sample Product Name</h1>
+      <p class="product-price">$99.99</p>
+
+      <div class="variants">
+        <div class="variant-colors">
+          <h3>Colors</h3>
+          <div id="colorSwatches">
+            <!-- Color swatches inserted dynamically -->
+          </div>
+          <button id="compareColorsBtn">Compare Colours</button>
+        </div>
+        <div class="variant-sizes">
+          <h3>Size</h3>
+          <select id="sizeSelect">
+            <option value="">Select Size</option>
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">ExtraLarge</option>
+            <option value="XXL">EXtraExtraLarge</option>
+          </select>
+          <button id="sizeChartBtn">Size Chart</button>
+        </div>
+      </div>
+
+      <button class="add-to-cart-btn">Add to Cart</button>
+
+      <section class="product-info-tabs">
+        <nav>
+          <button class="tab-button active" data-tab="description">Description</button>
+          <button class="tab-button" data-tab="productInfo">Product Information</button>
+          <button class="tab-button" data-tab="shippingDetails">Shipping Details</button>
+        </nav>
+        <div class="tab-content active" id="description">
+          <p>This is the product description. Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="tab-content" id="productInfo">
+          <p>Product details, specifications, materials, etc.</p>
+        </div>
+        <div class="tab-content" id="shippingDetails">
+          <p>Shipping policy, estimated delivery times, etc.</p>
+        </div>
+      </section>
+    </section>
+
+    <section class="pair-well-with">
+      <h2>Pair Well With</h2>
+      <div class="carousel" id="pairCarousel">
+        <!-- Complementary product cards inserted dynamically -->
+      </div>
+    </section>
+
+    <section class="product-bundle">
+      <h2>Buy These Together</h2>
+      <div class="bundle-products">
+        <!-- Bundle product cards inserted dynamically -->
+      </div>
+      <div class="bundle-total">
+        Total: $199.98
+      </div>
+      <button class="add-bundle-cart-btn">Add Bundle to Cart</button>
+    </section>
+
+    <section class="related-products">
+      <h2>Related Products</h2>
+      <div class="related-grid">
+        <!-- Related product cards inserted dynamically -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Size Chart Modal -->
+  <div id="sizeChartModal" class="modal hidden">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="sizeChartTitle">
+      <button class="close-modal" aria-label="Close modal">&times;</button>
+      <h2 id="sizeChartTitle">Size Chart</h2>
+      <table>
+        <thead><tr><th>Size</th><th>Chest (inches)</th><th>Waist (inches)</th></tr></thead>
+        <tbody>
+          <tr><td>S</td><td>34-36</td>
+          <tr><td>M</td><td>38-40</td>
+          <><td>L</td><td>42-44</td>
+          <><td>xL</td><td>46-48</td>
+          <tr><td>xxL</td><td>Free Size</td>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Compare Colors Modal -->
+  <div id="compareColorsModal" class="modal hidden">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="compareColorsTitle">
+      <button class="close-modal" aria-label="Close modal">&times;</button>
+      <h2 id="compareColorsTitle">Compare Colours</h2>
+      <div id="compareColorsContainer">
+        <!-- Selected color swatches will appear here side-by-side -->
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
