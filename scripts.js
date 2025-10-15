@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const compareColorsContainer = document.getElementById("compareColorsContainer");
   const modalCloseButtons = document.querySelectorAll(".close-modal");
   const mainAddToCartBtn = document.querySelector(".add-to-cart-btn");
+  const buyNowBtn = document.querySelector(".buy-now-btn");
   const addBundleCartBtn = document.querySelector(".add-bundle-cart-btn");
 
   let cart = [];
@@ -97,6 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
       // Implement actual cart logic here if needed
     });
   }
+  if (buyNowBtn) {
+  buyNowBtn.addEventListener("click", () => {
+    alert("Thank you for your purchase! Redirecting to checkout...");
+    // Redirect to checkout page or proceed with purchase logic here
+    // window.location.href = "/checkout"; // example redirect
+  });
+}
 
   // Event delegation for pair products Add to Cart buttons
   pairCarousel.addEventListener("click", e => {
